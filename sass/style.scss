@@ -1,0 +1,269 @@
+@import"__variable";
+@import"__default";
+	%transition{-webkit-transition:all 0.9 ease;
+	    		-o-transition:all 0.9 ease;
+	    		transition:all 0.9 ease;}
+
+@mixin radius($valu){border-radius:$valu;}
+@mixin shadow($x, $y, $blur){
+			-webkit-box-shadow: $x $y $blur #00000026; 			
+			 box-shadow: $x $y $blur #00000026;}
+
+
+	%btn{					font-size: 20px;
+						    letter-spacing: 1px;
+						    @include radius(30px);
+    						padding: 3px 20px;
+    						@extend %transition;}
+
+header{background-color: $bg_color;
+/*	padding: 70px 0;*/
+	.navbar-light{
+			.navbar-brand{
+				img{width:200px;}
+					}
+					.navbar-nav{
+						li{
+							.nav-link{color:$primary_color;
+								     @extend %btn;
+							
+
+
+						    
+
+					&:hover{background-color:$secondary_color;
+					color:#fff;
+		    }
+						}
+						&:last-child{
+							.nav-link{background-color:$secondary_color;
+					color:#fff;}
+						}
+					}
+					}
+				}
+				.row{padding: 50px 0;}
+				h4{color:#FC5B27;
+				    font-size: 18px;}
+				h1{font-weight: 600;
+					font-size: 70px;
+					color:$primary_color;
+					line-height: 1.1;
+					span{color:$secondary_color;}
+				}
+				p{color:$primary_color;
+					font-size: 18px;
+					line-height: 1.8;
+					opacity: 0.6; }
+				}
+
+.btn-custom{background-color:$secondary_color;
+			color: #fff;
+			@extend %btn; 
+			border:2px solid $secondary_color;
+
+					&:hover{background-color:transparent;
+					color:$secondary_color;
+		    }}
+
+
+.books-section{padding:40px 0;
+	.book{background-color: $bg_color;
+			text-align: center;
+			padding: 35px 20px;
+			@include radius(20px);
+			@extend %transition;
+				 
+&:hover{background-color:white;
+@include shadow (0, 20px, 40px);
+
+
+
+			}
+		img{height: 100px;}
+		h2{font-size: 25px;
+		    font-weight: 700;
+		    margin-top: 10px;}
+		p{color:$primary_color;
+					font-size: 18px;
+					line-height: 1.8;
+					opacity: 0.6; 
+					margin-bottom: 0;}
+	}
+}
+.heading{text-align: center;
+	h2{font-size: 40px;
+		padding: 40px 0;
+		color: #413960;
+		font-weight: 900;
+		font-family: sans-serif;
+	}
+}
+.coures-section{
+
+	.card-cours{
+		@include radius (20px);
+
+		&:hover { @include shadow (0, 20px, 40px); };
+		
+		border:0;
+
+		.card-body{
+			img{}
+			.card-title{margin-top: 15px;
+		    margin-bottom: 5px;
+		    font-size: 25px;
+		    font-weight: 600;
+			color:#413960;}
+			.card-text{    opacity: 0.7;
+						    margin-top: 0;
+						    margin-bottom: 1rem;
+						    font-size: 16px;}
+			ul{    
+				align-items:center;
+				padding-top: 25px;
+				    opacity: 0.5;
+				    font-family: sans-serif;
+					    font-size: 16px;
+					    font-weight: 700;
+					    padding-bottom: 25px;
+				li{
+					img{width: 20px;}
+					span{}
+				}
+			}
+		}
+	}
+}
+.test-section{padding: 50px 0;
+img{}
+h6{padding-left: 35px;
+	color:#000000;
+					font-size: 22px;
+					line-height: 1.6;
+					/*opacity: 0.6;*/ 
+					margin-bottom: 0;
+					font-weight: 500;}
+
+}
+.fotar{background-color: #282531;
+		color: #fff;
+		padding: 50px 0;
+		p{color:#C6C5C8;}
+		h3{color:#C6C5C8;
+			font-size: 20px;
+			font-weight: 700;
+			font-family: sans-serif;}
+			ul{
+				li{
+					a{color: #C6C5C8;
+						font-size: 16px;
+						text-decoration: none;}
+				}
+			}
+		}
+		.copyright{text-align: center;
+			background-color:#282531;
+			p{color: #C6C5C8;
+				padding-bottom: 10px;
+				font-family: sans-serif;} }
+
+
+
+	@media(max-width: 1199px){
+		header h1 {
+    font-weight: 700;
+    font-size: 50px}
+
+	}
+
+	@media(max-width: 991px){
+		header h1 {
+    font-weight: 700;
+    font-size: 35px;}
+
+    .coures-section .card-cours .card-body .card-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 18px;}
+
+    .test-section h6 {
+    line-height: 1;
+    color: #000000;
+    font-size: 18px;}
+
+
+.navbar-nav {
+   
+    -ms-flex-direction: row;
+    flex-direction: row;
+	justify-content:flex-end;}
+
+	.books-section .book h2 {
+    font-size: 15px;
+    font-weight: 500;}
+    .books-section .book p {
+    color: #000000;
+    font-size: 14px;
+	opacity: 1;}
+
+	}
+
+	@media(max-width: 767px){
+		header h1 {
+    font-weight: 500;
+    font-size: 25px;}
+    .coures-section .card-cours .card-body .card-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;}
+
+    header p {
+    color: #000000;
+    font-size: 15px;}
+    header h4 {
+    color: #FC5B27;
+    font-size: 12px;}
+    .btn-custom {
+    font-size: 10px;
+    letter-spacing: 1px;
+  /*  border-radius: 30px;*/
+    padding: 3px 15px;}
+
+.books-section .book img {
+			height: 80px;}
+
+			.books-section .book h2 {
+    font-size: 10px;}
+    .books-section .book p {line-height: 1;}
+
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+    align-items: center;}
+  
+
+
+
+	}
+
+	@media(max-width: 575px){
+
+		.books-section .book {padding-top: 25px 0;}
+		.navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+	align-items: center;}
+	.test-section h6 {
+    line-height: 1;
+    color: #000000;
+    font-size: 10px;}
+
+
+.col-lg-2{text-align: center;}
+.col-lg-2 img{max-width: 200px;padding-bottom: 20px;}
+
+.fotar{text-align: center;}
+
+    
+	}
